@@ -7,8 +7,19 @@ Requirements:
 * Python >= 2.7
 * [gTTS](https://pypi.python.org/pypi/gTTS)
 
-Use *help* for usage description.
+*Flags:*
 
-```bash
-python SpeechGenerator.py [-h] [--help]
+* --help, -h: Show program usage help.
+```
+python SpeechGenerator.py [--help] [-h] 
+```
+
+* --text, -t: Identify the text you want to be pronounced.
+* --lang, -l: Set the speech language.
+* --speed, -s: Choose the velocity of the speech, between fast and slow.
+* --name, -n: Identify the output file name.
+
+*Example:*
+```
+python speech_generator.py -t Hello world -l en -s fast -n hello
 ```
