@@ -23,7 +23,7 @@ class SpeechGenerator(object):
                             help="Set the language for the speech. Default is "
                                  "english('en').")
 
-        parser.add_argument("-p", "--phrase",
+        parser.add_argument("-t", "--text",
                             action="store",
                             type=str,
                             nargs='*',
@@ -31,7 +31,7 @@ class SpeechGenerator(object):
                             help="Line that you want to use to create the "
                                  "speech.")
 
-        parser.add_argument("-v", "--velocity",
+        parser.add_argument("-s", "--speed",
                             action="store",
                             default='fast',
                             type=str,
@@ -52,12 +52,12 @@ class SpeechGenerator(object):
             if args.lang is not None:
                 self.lang = args.lang
 
-            if args.phrase is not None:
-                phrase = " ".join(args.phrase)
+            if args.text is not None:
+                phrase = " ".join(args.text)
                 self.phrase = phrase
 
-            if args.velocity is not None:
-                if args.velocity == 'slow':
+            if args.speed is not None:
+                if args.speed == 'slow':
                     self.slow = True
                 else:
                     self.slow = False
