@@ -11,7 +11,7 @@ Requirements:
 
 * --help, -h: Show program usage help.
 ```
-python SpeechGenerator.py [--help] [-h] 
+python speech_generator.py [--help] [-h] 
 ```
 
 * --text, -t: Identify the text you want to be pronounced.
